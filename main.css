@@ -1,80 +1,84 @@
 * {
-    padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
 }
-.header{
+button {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.header {
     width: 100%;
-    padding-top: 50px;
+    padding-top: 25px;
     background-color: #654f4f;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
 }
-.header-container{
+.header__container {
     padding-right: 40px;
 }
-.header-content{
+.header__content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header-logo{
+.header__logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     position: relative;
-    
 }
-.header-logo__img{
-    align-items: center;
-    position: absolute;
-    left: 40px;
-    margin-top: 8px;
-    z-index: 1;
-   
-}
-.header-logo__text{
+.header__logo-text {
     text-decoration: none;
-    color: #FFFFFF;
-    margin-top: 50px;
+    color: #ffffff;
     margin-left: 50px;
-    z-index: 2;
+    font-size: 23px;
 }
-.header-panel{
+.header__item {
     display: flex;
     gap: 141px;
 }
-.header-panel__items{
+.header__items {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 400;
 }
-.header-button{
+.header__arrow{
+    margin-left: 8px;
+    margin-bottom: 4px;
+    width: 7px;
+    height: 4px;
+}
+.header__button {
     font-size: 14px;
     background-color: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 12px;
-    color: #FFFFFF; 
+    color: #ffffff;
 }
-.header-button img{
+.header__button:hover {
+    background-color: rgb(175, 175, 150);
+    color: #654f4f;
+    transition: 0.5s;
+}
+.header__button img {
     top: 3px;
     position: relative;
     margin-right: 8px;
 }
-.header-adaptive{
+.header__adaptive {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .header-adaptive{
+    .header__adaptive {
         display: block;
     }
-    .header-panel{
+    .header__item {
         display: none;
     }
-    .header-button{
+    .header__button {
         display: none;
     }
 }

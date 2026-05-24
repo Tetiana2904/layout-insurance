@@ -117,35 +117,35 @@
     // 4 - Изменить почту 
     // 5 - Выйти 
 
-    const emails=["2873@gmail.com","Fly43@gmail.com","Robot@gmail.com"]
-    do{
-        const userAsk= Number(prompt("Какое действие хотите выполнить?"))
-        if(userAsk==1){
-            const email= prompt("Введите емейл для добавления")
-            emails.push(email)
-        }
-        else if(userAsk==2){
-            const email= prompt("Введите почту из списка для удаления")
-            for(let i=0; i<emails.length; i++){
-                if(email==emails[i]){
-                    emails.splice(i,1)
-                    break;
-                }
-            }
-        }
-        else if(userAsk==3){
-            for(const email of emails){
-                alert(email)
-            }
-        }
-        else if(userAsk==4){
-            const email= prompt("Введите емейл для изменения")
-            const newEmail= prompt("Какой емейл хотите изменить")
-            for(let i=0; i<emails.length; i++){
-                if(emails[i]==email){
-                    emails[i] = newEmail
-                    break;
-                }
-            }
-        }
-    } while(userAsk != 5)
+    // const emails=["2873@gmail.com","Fly43@gmail.com","Robot@gmail.com"]
+    // do{
+    //     const userAsk= Number(prompt("Какое действие хотите выполнить?"))
+    //     if(userAsk==1){
+    //         const email= prompt("Введите емейл для добавления")
+    //         emails.push(email)
+    //     }
+    //     else if(userAsk==2){
+    //         const email= prompt("Введите почту из списка для удаления")
+    //         for(let i=0; i<emails.length; i++){
+    //             if(email==emails[i]){
+    //                 emails.splice(i,1)
+    //                 break;
+    //             }
+    //         }
+    //     }
+    //     else if(userAsk==3){
+    //         for(const email of emails){
+    //             alert(email)
+    //         }
+    //     }
+    //     else if(userAsk==4){
+    //         const email= prompt("Введите емейл для изменения")
+    //         const newEmail= prompt("Какой емейл хотите изменить")
+    //         for(let i=0; i<emails.length; i++){
+    //             if(emails[i]==email){
+    //                 emails[i] = newEmail
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // } while(userAsk != 5)
