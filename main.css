@@ -5,16 +5,17 @@ button {
     cursor: pointer;
     transition: 0.5s;
 }
-
+.hero{
+    height: 750px;
+    background-size: cover;
+    background-image: url(./images/background.jng.png);
+}   
 .header {
-    width: 100%;
-    padding-top: 25px;
-    background-color: #654f4f;
+    padding: 25px 20px;
+    background-color: transparent;
     font-family: 'Inter', sans-serif;
 }
-.header__container {
-    padding-right: 40px;
-}
+
 .header__content {
     width: 100%;
     display: flex;
@@ -30,20 +31,20 @@ button {
 .header__logo-text {
     text-decoration: none;
     color: #ffffff;
-    margin-left: 50px;
+    
     font-size: 23px;
 }
-.header__item {
+.header__nav {
     display: flex;
-    gap: 141px;
+    gap: 100px;
 }
-.header__items {
+.header__link {
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
 }
-.header__arrow{
+.header__arrow {
     margin-left: 8px;
     margin-bottom: 4px;
     width: 7px;
@@ -56,6 +57,7 @@ button {
     border-radius: 5px;
     padding: 12px;
     color: #ffffff;
+    
 }
 .header__button:hover {
     background-color: rgb(175, 175, 150);
@@ -67,18 +69,26 @@ button {
     position: relative;
     margin-right: 8px;
 }
-.header__adaptive {
+.header__menu {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .header__adaptive {
+@media (max-width: 900px) {
+    .header__menu {
         display: block;
     }
-    .header__item {
+    .header__nav {
         display: none;
     }
     .header__button {
         display: none;
     }
 }
+@media (max-width: 576px){
+    .hero{
+        height: 416px;
+        background-position: center bottom;
+        background-size: cover;
+    }
+}
+
