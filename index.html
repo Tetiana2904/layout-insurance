@@ -13,30 +13,58 @@
         <title>Document</title>
     </head>
     <body>
+        <!-- Шапка сайта -->
         <header class="header">
             <div class="header__container">
                 <div class="header__content">
+                    <!-- Логотип -->
                     <a class="header__logo" href="#">
                         <span class="header__logo-text">trip страхование</span>
                     </a>
-                    <nav class="header__nav">
-                        <a class="header__link" href="#"
-                            >Продукты
-                            <img
-                                class="header__arrow"
-                                src="./images/arrow-down.svg"
-                                alt=""
-                            />
-                        </a>
-                        <a class="header__link" href="#">Отзывы</a>
-                        <a class="header__link" href="#">Партнерам</a>
+                    <!-- Навигация: семантика nav > ul > li > a -->
+                    <nav class="header__nav" aria-label="Основная навигация">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a class="header__link" href="#">
+                                    Продукты
+                                    <img
+                                        class="header__arrow"
+                                        src="./images/arrow-down.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                    />
+                                </a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="header__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="header__link" href="#">Партнерам</a>
+                            </li>
+                        </ul>
                     </nav>
-                    <button class="header__button">
-                        <img src="./images/discount-icon.svg" alt="" />
-                        Скидки
-                    </button>
-                    <div class="header__menu">
-                        <img src="./images/header-menu.svg" alt="menu" />
+                    <!-- Правая зона: кнопка скидок и бургер -->
+                    <div class="header__actions">
+                        <button class="header__button" type="button">
+                            <img
+                                src="./images/discount-icon.svg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                            Скидки
+                        </button>
+                        <!-- Бургер-меню (только визуал, без логики открытия) -->
+                        <button
+                            class="header__menu"
+                            type="button"
+                            aria-label="Открыть меню"
+                        >
+                            <img
+                                src="./images/header-menu.svg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                        </button>
                     </div>
                 </div>
             </div>
@@ -70,106 +98,149 @@
             </section>
             <section class="benefits">
                 <div class="benefits__container">
-                    <div class="benefits__left">
-                        <div class="benefits__item">
-                            <div class="benefits__description">
-                                <h1 class="benefits__title">
-                                    Покрываем коронавирус
-                                </h1>
-                                <p class="benefits__text">
-                                    Все наши полисы покрывают лечение и
-                                    диагностику в случае заражения COVID-19,
-                                    ведь не все страны готовы лечить коронавирус
-                                    за свой счет. Максимальное покрытие по
-                                    медицинским расходам составит 100 000
-                                    USD/EUR. Также полисом предусмотрена
-                                    компенсация по риску отмена поездки, если
-                                    застрахованный заболеет COVID-19.
-                                </p>
-                            </div>
-                            <img
-                                class="benefits__image"
-                                src="./images/benefit-chronic.svg"
-                                
-                                alt=""
-                            />
+                    <div class="benefits__item">
+                        <div class="benefits__description">
+                            <h3 class="benefits__title">
+                                Покрываем коронавирус
+                            </h3>
+                            <p class="benefits__text">
+                                Все наши полисы покрывают лечение и диагностику
+                                в случае заражения COVID-19, ведь не все страны
+                                готовы лечить коронавирус за свой счет.
+                                Максимальное покрытие по медицинским расходам
+                                составит 100 000 USD/EUR. Также полисом
+                                предусмотрена компенсация по риску отмена
+                                поездки, если застрахованный заболеет COVID-19.
+                            </p>
+                            <a href="#" class="benefits__link">Читать далее</a>
                         </div>
-                        <div class="benefits__item">
-                            <div class="benefits__description">
-                                <h1 class="benefits__title">
-                                    Доктор онлайн 24/7
-                                </h1>
-                                <p class="benefits__text">
-                                    Чтобы не тратить время на дорогу до клиники
-                                    и ожидание врача, наши клиенты могут
-                                    бесплатно получить онлайн-консультацию
-                                    терапевта или педиатра в приложении на
-                                    смартфоне. Эта опция включена во все
-                                    страховки независимо от тарифа. Врач
-                                    отвечает сразу же 24/7 в видео- или
-                                    онлайн-чате. Нужно лишь установить наше
-                                    приложение.
-                                </p>
-                            </div>
-                            <img
-                                class="benefits__image"
-                                src="./images/benefit-clinic.svg"
-                                
-                                alt=""
-                            />
+                        <img
+                            class="benefits__image"
+                            src="./images/benefit-covid.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="benefits__item">
+                        <img
+                            class="benefits__image"
+                            src="./images/benefit-chronic.svg"
+                            alt=""
+                        />
+                        <div class="benefits__description-right">
+                            <h3 class="benefits__title">
+                                Помощь при обострении хронических заболеваний
+                            </h3>
+                            <p class="benefits__text">
+                                Сейчас даже у людей моложе 30 лет есть
+                                хронические заболевания, которые время от
+                                времени дают о себе знать. Не говоря уже о
+                                пожилых людях - для них помощь при обострении
+                                хронических заболеваний особенно важна. Поэтому
+                                мы предлагаем одно из самых больших покрытий на
+                                рынке по купированию обострений хронических
+                                заболеваний – до 3 000 $.
+                            </p>
+                            <a href="#" class="benefits__link">Читать далее</a>
                         </div>
                     </div>
-                    <div class="benefits__right">
-                        <div class="benefits__item">
-                            <div class="benefits__description">
-                                <img
-                                class="benefits__image"
-                                src="./images/benefit-covid.svg"
-                                alt=""
-                            />
-                                <h1 class="benefits__title">
-                                    Помощь при обострении хронических
-                                    заболеваний
-                                </h1>
-                                <p class="benefits__text">
-                                    Сейчас даже у людей моложе 30 лет есть
-                                    хронические заболевания, которые время от
-                                    времени дают о себе знать. Не говоря уже о
-                                    пожилых людях - для них помощь при
-                                    обострении хронических заболеваний особенно
-                                    важна. Поэтому мы предлагаем одно из самых
-                                    больших покрытий на рынке по купированию
-                                    обострений хронических заболеваний – до 3
-                                    000 $.
-                                </p>
-                            </div>
-                            
-                        </div>
 
-                        <div class="benefits__item">
-                            <div class="benefits__description">
-                                <img
-                                class="benefits__image"
-                                src="./images/benefit-doctor.png"
-                                alt=""
-                            />
-                                <h1 class="benefits__title">
-                                    Только проверенные клиники
-                                </h1>
-                                <p class="benefits__text">
-                                    Мы контролируем качество работы медицинских
-                                    учреждений с помощью Ваших рейтингов и
-                                    отзывов на нашем сайте. Если мы получаем
-                                    более 2-х негативных отзывов по клинике, то
-                                    просто перестаем с ней работать. Таким
-                                    образом, наших клиентов направляют только в
-                                    проверенные клиники, где быстро оказывают
-                                    квалифицированную медицинскую помощь.
-                                </p>
-                            </div>
-                           
+                    <div class="benefits__item">
+                        <div class="benefits__description">
+                            <h3 class="benefits__title">Доктор онлайн 24/7</h3>
+                            <p class="benefits__text">
+                                Чтобы не тратить время на дорогу до клиники и
+                                ожидание врача, наши клиенты могут бесплатно
+                                получить онлайн-консультацию терапевта или
+                                педиатра в приложении на смартфоне. Эта опция
+                                включена во все страховки независимо от тарифа.
+                                Врач отвечает сразу же 24/7 в видео- или
+                                онлайн-чате. Нужно лишь установить наше
+                                приложение.
+                            </p>
+                            <a href="#" class="benefits__link">Читать далее</a>
+                        </div>
+                        <img
+                            class="benefits__image-doctor"
+                            src="./images/benefit-doctor.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="benefits__item">
+                        <img
+                            class="benefits__image"
+                            src="./images/benefit-clinic.svg"
+                            alt=""
+                        />
+                        <div class="benefits__description-right">
+                            <h3 class="benefits__title">
+                                Только проверенные клиники
+                            </h3>
+                            <p class="benefits__text">
+                                Мы контролируем качество работы медицинских
+                                учреждений с помощью Ваших рейтингов и отзывов
+                                на нашем сайте. Если мы получаем более 2-х
+                                негативных отзывов по клинике, то просто
+                                перестаем с ней работать. Таким образом, наших
+                                клиентов направляют только в проверенные
+                                клиники, где быстро оказывают квалифицированную
+                                медицинскую помощь.
+                            </p>
+                            <a href="#" class="benefits__link">Читать далее</a>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section class="process">
+                <div class="process__conteiner">
+                    <h2 class="process__title">Как купить полис?</h2>
+                    <ul class="process__list">
+                        <li class="process__item">
+                            <span class="process__number">1</span>
+                            <img
+                                class="process__image"
+                                src="./images/process-calculator.svg"
+                                alt=""
+                            />
+                            <p class="process__text">
+                                Рассчитайте онлайн стоимость полиса
+                            </p>
+                        </li>
+
+                        <li class="process__item">
+                            <span class="process__number">2</span>
+                            <img
+                                class="process__image"
+                                src="./images/process-data.svg"
+                                alt=""
+                            />
+                            <p class="process__text">
+                                Введите данные о вашей поездке
+                            </p>
+                        </li>
+                        <li class="process__item">
+                            <span class="process__number">3</span>
+                            <img
+                                class="process__image"
+                                src="./images/process-wallet.svg"
+                                alt=""
+                            />
+                            <p class="process__text">
+                                Оплатите полис через интернет
+                            </p>
+                        </li>
+                        <li class="process__item">
+                            <span class="process__number">4</span>
+                            <img
+                                class="process__image"
+                                src="./images/process-print.svg"
+                                alt=""
+                            />
+                            <p class="process__text">
+                                Получите полис на e-mail и распечатайте
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>
