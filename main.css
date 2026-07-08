@@ -265,7 +265,11 @@ input[type='date']::-webkit-clear-button {
 }
 .process {
     font-family: 'Inter', sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 88px;
+}
+.process__container {
+    max-width: 1120px;
+    width: 100%;
 }
 
 .process__title {
@@ -287,7 +291,6 @@ input[type='date']::-webkit-clear-button {
     max-width: 295px;
     width: 100%;
     height: 295px;
-
     background-color: #5200d91a;
     border-radius: 5px;
     display: flex;
@@ -306,7 +309,9 @@ input[type='date']::-webkit-clear-button {
     font-weight: 800;
     color: #5300d92a;
 }
+
 .process__image {
+    margin-top: 30px;
     max-width: 110px;
     width: 100%;
     height: auto;
@@ -318,6 +323,34 @@ input[type='date']::-webkit-clear-button {
     color: #000000;
     text-align: center;
     font-size: 16px;
+}
+.process__image-calculator {
+    display: none;
+}
+.countries {
+    font-family: 'Inter', sans-serif;
+}
+.countries__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1920px;
+    width: 100%;
+}
+.countries__line {
+    display: flex;
+    border-top: 3px solid #5200d9;
+    border-bottom: 3px solid #5200d9;
+    font-size: 54px;
+    gap: 24px;
+    padding: 56px;
+    font-weight: 800;
+}
+.countries__line:first-of-type {
+    border-bottom: none;
+}
+.countries__line span {
+    font-size: 3.2vw;
 }
 
 @media (max-width: 992px) {
@@ -387,15 +420,21 @@ input[type='date']::-webkit-clear-button {
     }
     .process__number {
         font-size: 100px;
-        margin-left: 7px;
+        margin-left: -18px;
     }
+
     .process__image {
+        margin-top: 40px;
         max-width: 99px;
         width: 100%;
         height: auto;
     }
     .process__text {
         margin-top: 16px;
+    }
+    .countries__line {
+        padding: 32px;
+        font-size: 2vw;
     }
 }
 @media (max-width: 768px) {
@@ -475,10 +514,21 @@ input[type='date']::-webkit-clear-button {
     .benefits__image {
         width: 30%;
     }
+
     .process__list {
+        padding: 0 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .process__image-calculator {
+        display: flex;
+    }
+    .process__image {
+        display: none;
+    }
+    .countries__line {
+        padding: 32px;
     }
 }
 @media (max-width: 576px) {
@@ -560,6 +610,15 @@ input[type='date']::-webkit-clear-button {
     .benefits__image-doctor {
         width: 55%;
     }
+    .process__image-calculator {
+        display: none;
+    }
+    .process__image {
+        display: flex;
+    }
+    .process__title{
+        font-size: 20px;
+    }
 }
 @media (max-width: 500px) {
     .insurance__form {
@@ -635,4 +694,19 @@ input[type='date']::-webkit-clear-button {
     .benefits__text {
         line-height: 2;
     }
+    .process__text {
+        font-size: 16px;
+    }
+    .process__image-calculator {
+        display: flex;
+    }
+    .process__image {
+        display: none;
+    }
+    .countries__line {
+        gap: 6px;
+        font-size: 2.5vw;
+        
+    }
+    
 }
