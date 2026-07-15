@@ -218,7 +218,6 @@ input[type='date']::-webkit-clear-button {
     width: 100%;
     padding: 0 40px;
     display: flex;
-
     flex-direction: column;
     max-width: 1120px;
 }
@@ -352,7 +351,93 @@ input[type='date']::-webkit-clear-button {
 .countries__line span {
     font-size: 3.2vw;
 }
+.reviews {
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 88px;
+}
+.reviews__container {
+    padding: 0 40px;
+    width: 100%;
+}
 
+.reviews__title {
+    text-align: center;
+    font-weight: 600;
+    color: #11002d;
+    font-size: 32px;
+    margin-top: 150px;
+    margin-bottom: 56px;
+}
+.reviews__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.reviews__item {
+    max-width: 25%;
+    width: 100%;
+    height: 220px;
+    background-color: #5200d91a;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+    position: relative;
+}
+.reviews__top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reviews__item-date {
+    font-size: 14px;
+    color: #11002d;
+}
+.reviews__item-text {
+    line-height: 1.5;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 29px;
+    color: #11002d;
+}
+.reviews__item-author {
+    display: flex;
+    gap: 8px;
+}
+.reviews__item-img-author {
+    width: 32px;
+    height: 32px;
+}
+.reviews__item-name {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 1150px) {
+    .process__image {
+        max-width: 99px;
+        width: 100%;
+    }
+    .process__number {
+        font-size: 99px;
+    }
+    .reviews__item-img-stars{
+        width: 100px;
+    }
+    .reviews__item-date{
+        font-size: 16px;
+    }
+    .reviews__item-date{
+        font-size: 12px;
+    }
+    .reviews__item-text{
+        line-height: 1.2;
+    }
+
+}
 @media (max-width: 992px) {
     .insurance {
         background-position: center bottom;
@@ -417,6 +502,8 @@ input[type='date']::-webkit-clear-button {
     }
     .process__item {
         height: 213px;
+        max-width: 213px;
+        width: 23%;
     }
     .process__number {
         font-size: 100px;
@@ -430,11 +517,23 @@ input[type='date']::-webkit-clear-button {
         height: auto;
     }
     .process__text {
+        max-width: 213px;
+        width: 100%;
         margin-top: 16px;
     }
     .countries__line {
         padding: 32px;
         font-size: 2vw;
+    }
+    .reviews__item-author{
+        font-size: 14px;
+    }
+    .reviews__item{
+        max-width: 33%;
+        width: 100%;
+    }
+    .reviews__item:nth-child(n+4){
+        display: none;
     }
 }
 @media (max-width: 768px) {
@@ -527,8 +626,29 @@ input[type='date']::-webkit-clear-button {
     .process__image {
         display: none;
     }
+    .process__item {
+        max-width: 350px;
+        width: 44%;
+    }
+    .process__title {
+        font-size: 24px;
+    }
     .countries__line {
         padding: 32px;
+    }
+    .reviews__container{
+        padding: 0 40px;
+    }
+    .reviews__item:nth-child(n+3){
+        display: none;
+    }
+    .reviews__item{
+        max-width: 50%;
+        width: 100%;
+    }
+    .reviews__top{
+        justify-content: space-between;
+        gap: 0;
     }
 }
 @media (max-width: 576px) {
@@ -613,11 +733,17 @@ input[type='date']::-webkit-clear-button {
     .process__image-calculator {
         display: none;
     }
+    .reviews__container{
+        padding: 0 20px;
+    }
     .process__image {
         display: flex;
     }
-    .process__title{
+    .process__title {
         font-size: 20px;
+    }
+    .reviews__item-text{
+        font-size: 12px;
     }
 }
 @media (max-width: 500px) {
@@ -691,6 +817,10 @@ input[type='date']::-webkit-clear-button {
         font-weight: 600;
         font-size: 12px;
     }
+    .process__item {
+        max-width: 350px;
+        width: 100%;
+    }
     .benefits__text {
         line-height: 2;
     }
@@ -698,15 +828,36 @@ input[type='date']::-webkit-clear-button {
         font-size: 16px;
     }
     .process__image-calculator {
+        max-width: 100px;
+        width: 100%;
         display: flex;
     }
     .process__image {
         display: none;
     }
+    .process__number {
+        max-width: 50px;
+        width: 100%;
+    }
     .countries__line {
         gap: 6px;
         font-size: 2.5vw;
-        
     }
-    
+    .reviews__item:nth-child(n+2){
+        display: none;
+    }
+    .reviews__item{
+        max-width: 85%;
+    }
+    .reviews__item-text{
+        font-size: 14px;
+    }
+}
+@media (max-width: 250px){
+    .reviews__top{
+        flex-direction: column;
+    }
+    .reviews__item-text{
+        font-size: 10px;
+    }
 }
